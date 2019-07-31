@@ -65,4 +65,4 @@ For more information on command-line tasks in Genesys, visit the [Command line t
 
 ---------------
 
-For more documentation on Genesys, visit the [A2 documentation site](#).
+For more documentation on Genesys, visit the [Genesys documentation site](#).

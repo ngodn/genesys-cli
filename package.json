@@ -1,16 +1,16 @@
 {
-  "name": "apostrophe-cli",
+  "name": "genesys-cli",
   "version": "2.3.1",
-  "description": "Commandline generator and configurator for Apostrophe CMS",
+  "description": "Commandline generator and configurator for Genesys CMS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "P'unk Avenue",
+  "author": "ngodn",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/punkave/apostrophe-cli.git"
+    "url": "https://github.com/ngodn/genesys-cli"
   },
   "dependencies": {
     "colors": "~1.0.x",
@@ -23,7 +23,7 @@
   },
   "preferGlobal": true,
   "bin": {
-    "apostrophe": "bin/apostrophe",
-    "apos": "bin/apostrophe"
+    "genesys": "bin/genesys",
+    "genex": "bin/genesys"
   }
 }

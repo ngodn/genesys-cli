@@ -3,4 +3,4 @@ var config = {};
 module.exports = config;
 
 config.SHELL_DEPENDS = ['git'];
-config.APOSTROPHE_BOILERPLATE = 'https://github.com/punkave/apostrophe-boilerplate.git';
+config.GENESYS_BOILERPLATE = 'https://github.com/ngodn/genesys-boilerplate.git';

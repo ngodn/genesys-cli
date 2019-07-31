@@ -8,32 +8,32 @@ var fs = require('fs');
 
 program.version(getVersion());
 
-// Get version of apostrophe-cli and apostrophe.
+// Get version of genesys-cli and genesys.
 function getVersion() {
   var pkginfo = require('pkginfo')(module, 'version');
   var cwd = process.cwd();
 
-  var output = 'apostrophe-cli: v' + module.exports.version + '\n';
-  var aposPath = cwd + '/node_modules/apostrophe/';
+  var output = 'genesys-cli: v' + module.exports.version + '\n';
+  var genexPath = cwd + '/node_modules/genesys/';
 
-  // Append message for apostrophe.
-  if (fs.existsSync(aposPath)) {
-    var package = require(aposPath + 'package.json');
+  // Append message for genesys.
+  if (fs.existsSync(genexPath)) {
+    var package = require(genexPath + 'package.json');
 
-    output += 'apostrophe v' + package.version + ' is installed in this project.';
+    output += 'genesys v' + package.version + ' is installed in this project.';
   } else {
     var request = require('sync-request');
-    var response = request('GET', 'https://raw.githubusercontent.com/apostrophecms/apostrophe-boilerplate/master/package.json');
+    var response = request('GET', 'https://raw.githubusercontent.com/ngodn/genesys-boilerplate/master/package.json');
 
     if (response.statusCode == 200) {
       var packageJSON = JSON.parse(response.body);
 
-      output += 'apostrophe ' + packageJSON.dependencies.apostrophe + ' will be installed with a new project, according to the dependencies of apostrophe-boilerplate.';
+      output += 'genesys ' + packageJSON.dependencies.genesys + ' will be installed with a new project, according to the dependencies of genesys-boilerplate.';
     } else {
       var execSync = require('child_process').execSync;
-      var aposVersion = execSync('npm view apostrophe version').toString();
+      var genexVersion = execSync('npm view genesys version').toString();
 
-      output += 'apostrophe v' + aposVersion.trim() + ' (latest) will be installed with a new project, unless the boilerplate project\'s dependencies specify otherwise.';
+      output += 'genesys v' + genexVersion.trim() + ' (latest) will be installed with a new project, unless the boilerplate project\'s dependencies specify otherwise.';
     }
   }
 
@@ -46,10 +46,10 @@ var createCmd   = require('../lib/commands/create')(program);
 var createWidgetCmd = require('../lib/commands/create-widget')(program);
 var createPieceCmd = require('../lib/commands/create-piece')(program);
 var createModuleCmd = require('../lib/commands/create-module')(program);
-var aposCmd     = require('../lib/apostrophe')(program);
+var genexCmd     = require('../lib/genesys')(program);
 
 program.on('--help', function() {
-  aposCmd.help();
+  genexCmd.help();
 });
 
 program.parse(process.argv);

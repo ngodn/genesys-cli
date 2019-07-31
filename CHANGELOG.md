@@ -2,15 +2,15 @@
 
 ** 2.3.1
 
-Recognize `apostrophe-open-museum` as a default value for `shortName` so it can be autoreplaced for a new project.
+Recognize `genesys-open-museum` as a default value for `shortName` so it can be autoreplaced for a new project.
 
 ** 2.3.0
 
-* Automatically configures `disabledFileKey` for projects that have that option in `app.js` (not present in the standard apostrophe-boilerplate but we use it in our own in-house boilerplate). See the `uploadfs` documentation for the benefits.
+* Automatically configures `disabledFileKey` for projects that have that option in `app.js` (not present in the standard genesys-boilerplate but we use it in our own in-house boilerplate). See the `uploadfs` documentation for the benefits.
 
 ** 2.2.0
 
-* Automatically generates session secret, if the boilerplate has a placeholder for it (and apostrophe-boilerplate now does).
+* Automatically generates session secret, if the boilerplate has a placeholder for it (and genesys-boilerplate now does).
 
 ** 2.1.5
 
@@ -18,7 +18,7 @@ Recognize `apostrophe-open-museum` as a default value for `shortName` so it can 
 
 ** 2.1.4
 
-* Uses `npm update` rather than `npm install` so that we're not married to an ancient patchlevel of Apostrophe from the start when birthing a new project.
+* Uses `npm update` rather than `npm install` so that we're not married to an ancient patchlevel of Genesys from the start when birthing a new project.
 
 ** 2.1.3
 
