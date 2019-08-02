@@ -1,6 +1,6 @@
 {
   "name": "genesys-cli",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "Commandline generator and configurator for Genesys CMS",
   "main": "index.js",
   "scripts": {
